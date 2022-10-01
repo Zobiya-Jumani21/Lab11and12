@@ -167,21 +167,48 @@ JSONObject jsonObject = new JSONObject();
                 f2.rollnumt2.setText(rollnumt.getText());
                 f2.batcht2.setText(batcht.getText());
                 f2.sectiont2.setText(sectiont.getText());
-               // f2.gendert2.setText(gender);
-                
+
+                if (m1.isSelected()){
+                    gender = m1.getText();
+                    f2.gendert2.setText(gender);
+                }else if(f1.isSelected()){
+                    gender = f1.getText();
+                    f2.gendert2.setText(gender);
+                }
+
                f2.addresst2.setText(addresst.getText());
-                f2.Qualift2.setText(education);
+
+                if (j1.isSelected()){
+                    education=j1.getText();
+                    f2.Qualift2.setText(education);
+                }
+
+                if (j2.isSelected()){
+                    education=j2.getText();
+                    f2.Qualift2.setText(education);
+                }
+
+                if (j3.isSelected()){
+                    education=j3.getText();
+                    f2.Qualift2.setText(education);
+                }
+
+                if (j4.isSelected()){
+                    education=j4.getText();
+                    f2.Qualift2.setText(education);
+                }
+//                f2.Qualift2.setText(education);
                 f2.countryt2.setText(countryc.getSelectedItem().toString());
 
                 // for not editable Information
-//                 f2.namet2.setEditable(false);
-//                f2.rollnumt2.setEditable(false);
-//                f2.sectiont2.setEditable(false);
-//                f2.batcht2.setEditable(false);
-//                f2.gendert2.setEditable(false);
-//                f2.addresst2.setEditable(false);
-//                f2.countryt2.setEditable(false);
-//                f2.Qualift2.setEditable(false);
+                 f2.namet2.setEditable(false);
+                f2.rollnumt2.setEditable(false);
+                f2.sectiont2.setEditable(false);
+                f2.batcht2.setEditable(false);
+                f2.gendert2.setEditable(false);
+                f2.addresst2.setEditable(false);
+                f2.countryt2.setEditable(false);
+               f2.Qualift2.setEditable(false);
 
             } catch (Exception ae) {
                 System.out.println(ae.getMessage());
@@ -193,6 +220,7 @@ JSONObject jsonObject = new JSONObject();
              batch = batcht.getText();
              rollnum =rollnumt.getText();
              section = sectiont.getText();
+             address=addresst.getText();
 
             if (m1.isSelected()){
                 gender = m1.getText();
@@ -200,7 +228,7 @@ JSONObject jsonObject = new JSONObject();
             }else if(f1.isSelected()){
                 gender = f1.getText();
             }
-            address=addresst.getText();
+
 
             if (j1.isSelected()){
                 education=j1.getText();
